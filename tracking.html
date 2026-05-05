@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pengiriman - UT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="display: block; padding: 20px;">
+
+    <div class="container" style="max-width: 600px; margin: auto; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <header style="text-align: center; margin-bottom: 20px;">
+            <h2 style="color: #004da0;">Lacak Pengiriman Bahan Ajar</h2>
+            <p>Masukkan Nomor Delivery Order (DO) Anda</p>
+        </header>
+        <div style="display: flex; gap: 10px; margin-bottom: 30px;">
+            <input type="text" id="inputDO" placeholder="Contoh: 2023001234" style="margin: 0;">
+            <button onclick="cariTracking()" style="width: 100px;">Cari</button>
+        </div>
+        <div id="hasilTracking" style="display: none; border-top: 2px solid #eee; padding-top: 20px;">
+            <h3>Detail Pengiriman</h3>
+            
+            <p><strong>Nama Mahasiswa:</strong> <span id="trackNama"></span></p>
+            
+            <label><strong>Status Pengiriman:</strong></label>
+            <!-- Progress Bar untuk simulasi status -->
+            <div class="progress-container">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+            <p id="trackStatus" style="font-weight: bold; color: #4caf50;"></p>
+            <table style="font-size: 14px;">
+                <tr>
+                    <td>Ekspedisi</td>
+                    <td id="trackEkspedisi"></td>
+                </tr>
+                <tr>
+                    <td>Tanggal Kirim</td>
+                    <td id="trackTgl"></td>
+                </tr>
+                <tr>
+                    <td>Jenis Paket</td>
+                    <td id="trackPaket"></td>
+                </tr>
+                <tr>
+                    <td>Total Pembayaran</td>
+                    <td id="trackTotal"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center;">
+            <a href="dashboard.html" style="color: #004da0; text-decoration: none; font-weight: bold;">← Kembali ke Dashboard</a>
+        </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

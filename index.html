@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Pemesanan Bahan Ajar UT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login UT-Daerah</h2>
+        <input type="email" id="email" placeholder="Email (rina@ut.ac.id)">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="prosesLogin()">Login</button>
+        <div class="modal-links">
+            <span onclick="openModal('Lupa Password')">Lupa Password</span> | 
+            <span onclick="openModal('Daftar')">Daftar</span>
+        </div>
+    </div>
+    <div id="modalBox" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <p>Silahkan hubungi Administrator UT-Pusat.</p>
+        </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

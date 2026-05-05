@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Stok Bahan Ajar - UT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="renderStok()" style="display: block; padding: 20px;">
+
+    <div class="container" style="max-width: 900px; margin: auto; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <header style="text-align: center; margin-bottom: 20px;">
+            <h2 style="color: #004da0;">Informasi Stok Bahan Ajar</h2>
+            <p>Data dinamis dari SITTA Universitas Terbuka</p>
+        </header>
+        <table id="tabelBahanAjar">
+            <thead>
+                <tr>
+                    <th>Cover</th>
+                    <th>Kode Barang</th>
+                    <th>Nama Barang</th>
+                    <th>Edisi</th>
+                    <th>Stok</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 20px; display: flex; gap: 10px; justify-content: center;">
+            <button onclick="tambahBaris()" style="width: auto; background-color: #4caf50;">+ Tambah Baris Baru</button>
+            <button onclick="window.location.href='dashboard.html'" style="width: auto; background-color: #666;">Kembali ke Dashboard</button>
+        </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

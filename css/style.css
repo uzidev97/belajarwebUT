@@ -1,0 +1,118 @@
+/* --- Pengaturan Dasar --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Container Utama (Login) --- */
+.login-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 350px;
+    text-align: center;
+}
+
+h2 { color: #004da0; margin-bottom: 20px; }
+
+/* --- Input dan Tombol --- */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Agar padding tidak merusak lebar */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #004da0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover { background-color: #003366; }
+
+.modal-links {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.modal-links span {
+    color: #004da0;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* --- CSS Modal Box (Penting untuk Langkah 3) --- */
+.modal {
+    display: none; /* Tersembunyi secara default */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Latar belakang gelap transparan */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 25px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- Tabel (Untuk Halaman Stok) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th { background-color: #004da0; color: white; }
+
+/* --- Progress Bar (Untuk Halaman Tracking) [cite: 24, 25] --- */
+.progress-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    margin: 15px 0;
+}
+
+.progress-bar {
+    width: 0%; /* Diatur oleh JavaScript */
+    height: 20px;
+    background-color: #4caf50;
+    border-radius: 20px;
+    transition: width 0.5s ease-in-out;
+}

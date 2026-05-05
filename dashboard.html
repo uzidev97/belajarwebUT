@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SITTA UT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="setGreeting()" style="display: block; padding: 40px;">
+
+    <div class="dashboard-container" style="max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <header style="text-align: center; margin-bottom: 30px; border-bottom: 2px solid #eee; padding-bottom: 20px;">
+            <!-- ID greeting ini akan diisi teks oleh script.js -->
+            <h1 id="greeting" style="color: #004da0; margin: 0;">Selamat Datang</h1>
+            <p style="color: #666;">Sistem Informasi Pemesanan Bahan Ajar (SITTA)</p>
+        </header>
+
+        <div class="menu-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+            <!-- Tombol Navigasi -->
+            <a href="stok.html" class="menu-btn">Informasi Bahan Ajar</a>
+            <a href="tracking.html" class="menu-btn">Tracking Pengiriman</a>
+            <a href="#" class="menu-btn disabled">Laporan</a>
+            <a href="#" class="menu-btn disabled">Monitoring Progress DO</a>
+            <a href="#" class="menu-btn disabled">Rekap Bahan Ajar</a>
+            <a href="#" class="menu-btn disabled">Histori Transaksi</a>
+        </div>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <button onclick="window.location.href='index.html'" style="width: 150px; background-color: #f44336;">Keluar</button>
+        </div>
+    </div>
+    <style>
+        .menu-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            background-color: #ffcc00;
+            color: #004da0;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 8px;
+            padding: 10px;
+            transition: 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .menu-btn:hover {
+            background-color: #e6b800;
+            transform: translateY(-3px);
+        }
+        .menu-btn.disabled {
+            background-color: #e0e0e0;
+            color: #999;
+            cursor: not-allowed;
+        }
+    </style>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
